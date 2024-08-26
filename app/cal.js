@@ -32,6 +32,7 @@ export default function Cal() {
         value={input}
         editable={false}
         placeholder="0"
+        placeholderTextColor="black"
       />
       <View style={styles.ClearoneText}></View>
           <TouchableOpacity onPress={handleBackspace}>
@@ -61,21 +62,27 @@ export default function Cal() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // justifyContent: 'center',
     alignItems: 'center',
     padding: wp('2%'),
   },
   inputcontainer:{
+    width: wp('80%'),
+    height:hp('40%'),
     borderRadius: 5,
       flexDirection:"row",
-    gap:25
-
+    gap:25,
+    padding: wp('2%'),
   },
   input: {
+    width: wp('60%'),
+    height:hp('35%'),
+    // backgroundColor:"gray",
     borderRadius: 5,
-    fontSize: wp('5%'),
+    fontSize: wp('8%'),
     textAlign: 'right',
     padding: wp('2%'),
+    color:"black"
+ 
   },
   line:{
     width: wp('110%'),
@@ -84,15 +91,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   button: {
-    width: wp('15%'),
-    height: hp('8%'),
+    width: wp('25%'),
+    height: hp('10%'),
     alignItems: 'center',
     margin: wp('1%'),
     borderRadius: 5,
     marginBottom:10
   },
   buttonText: {
-    fontSize: wp('3%'),
+    fontSize: wp('7%'),
     color: 'black',
   },
 });
